@@ -1,1 +1,2 @@
-Dataset(Kaggle)/Credit Card Fraud Detection Dataset/creditcard.csv
+venv/
+__pycache__/
