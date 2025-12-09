@@ -20,19 +20,17 @@ Deployed the API on Railway, offering a cloud-hosted, production-style inference
 
 📂 Project Structure
 Credit-Card-Fraud-Detection/
-│
-├── backend/
-│   ├── app.py                # FastAPI application
-│   ├── model.pkl             # Trained ML model
-│   └── requirements.txt      # Python dependencies
-│
-├── docker/
-│   └── Dockerfile            # Docker build file
-│
-├── notebooks/
-│   └── training.ipynb        # Google Colab: training & evaluation
-│
-├── README.md                 # Project documentation
+├── app/
+│   ├── __init__.py
+│   ├── main.py            # The API endpoints
+│   ├── schemas.py         # Data validation (Pydantic)
+│   ├── utils.py           # Preprocessing logic
+│   └── model/
+│       ├── rf_fraud_model.pkl
+│       ├── model_features.pkl
+│       └── scaler.pkl     # (Optional, see Step 0)
+├── requirements.txt
+└── README.md
 └── .gitignore
 
 🧠 What This Project Demonstrates
