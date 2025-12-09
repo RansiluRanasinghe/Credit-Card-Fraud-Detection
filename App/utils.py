@@ -8,11 +8,15 @@ MODEL_DIR = os.path.join(os.path.dirname(__file__), "model")
 def load_modules():
 
     try:
-        model = joblib.load(os.path.join(MODEL_DIR), "rf_fraud_model.pkl")
-        features = joblib.load(os.path.join(MODEL_DIR), "model_features.pkl")
+        model_path = os.path.join(MODEL_DIR, "rf_fraud_model.pkl")
+        features_path = os.path.join(MODEL_DIR, "model_features.pkl")
+        scaler_path = os.path.join(MODEL_DIR, "scaler.pkl")
+
+        model = joblib.load(model_path)
+        features = joblib.load(features_path)
 
         try:
-            scaler = joblib.load(os.path.join(MODEL_DIR), "scaler.pkl")
+            scaler = joblib.load(scaler_path)
         except:
             scaler = None 
 

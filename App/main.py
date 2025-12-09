@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
-from App.schemas import FraudPredictionInput
-from App.utils import load_modules, preprocess_inputs
+from app.schemas import FraudPredictionInput
+from app.utils import load_modules, preprocess_inputs
 
 app = FastAPI(title="Credit Card Fraud Detection API")
 
@@ -47,5 +47,4 @@ def predict(payload: FraudPredictionInput):
           raise HTTPException(status_code=400, detail=str(ve))
      except Exception as e:
           raise HTTPException(status_code=500, detail=str(e))
-     
      

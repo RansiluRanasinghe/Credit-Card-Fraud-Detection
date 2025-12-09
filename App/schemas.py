@@ -3,7 +3,7 @@ from typing import Dict
 
 class FraudPredictionInput(BaseModel):
 
-    features = Dict[str, float]
+    features: Dict[str, float]
     amount: float = Field(..., gt=0, description="Transaction amount")
 
     class config:
