@@ -103,28 +103,3 @@ uvicorn app.main:app --reload
 Visit:
 
 👉 http://localhost:8000/docs
-
-You can test predictions directly from the browser.
-
-📊 Model Performance (Example — replace with your numbers)
-Metric	Score
-Precision	1.00
-Recall	0.80
-F1 Score	0.89
-ROC-AUC	0.99
-🧪 Example Prediction Request
-POST /predict
-{
-  "V1": -1.359807,
-  "V2": -0.072781,
-  "V3": 2.536347,
-  "V4": 1.378155,
-  "V5": -0.338321,
-  "Amount": 149.62
-}
-
-Response
-{
-  "fraud": 0,
-  "confidence": 0.12
-}
